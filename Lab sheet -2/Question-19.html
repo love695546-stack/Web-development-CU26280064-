@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .registration-form {
+            width: 400px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: Georgia, serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+
+            /* Typography Rules */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        /* Placeholder Typography */
+        input::placeholder {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            font-family: Arial, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="registration-form">
+
+        <h2>Registration Form</h2>
+
+        <form>
+
+            <label>Full Name</label>
+            <input type="text"
+                   placeholder="Enter your full name">
+
+            <label>Email Address</label>
+            <input type="email"
+                   placeholder="Enter your email address">
+
+            <label>Username</label>
+            <input type="text"
+                   placeholder="Enter your username">
+
+            <label>Password</label>
+            <input type="password"
+                   placeholder="Enter your password">
+
+            <label>Phone Number</label>
+            <input type="tel"
+                   placeholder="Enter your phone number">
+
+            <button type="submit">Register</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

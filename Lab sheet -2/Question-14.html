@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Range and Number Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .value {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>Distance Form</h2>
+
+        <form>
+
+            <label>
+                Distance:
+                <span class="value">
+                    <span id="rangeValue">10</span> km
+                </span>
+            </label>
+
+            <input type="range"
+                   id="distance"
+                   min="1"
+                   max="100"
+                   value="10">
+
+            <label>
+                Enter Distance:
+            </label>
+
+            <input type="number"
+                   id="numberValue"
+                   min="1"
+                   max="100"
+                   value="10">
+
+        </form>
+
+    </div>
+
+    <script>
+        let range = document.getElementById("distance");
+        let number = document.getElementById("numberValue");
+        let value = document.getElementById("rangeValue");
+
+        range.oninput = function () {
+            number.value = range.value;
+            value.innerHTML = range.value;
+        };
+
+        number.oninput = function () {
+            range.value = number.value;
+            value.innerHTML = number.value;
+        };
+    </script>
+
+</body>
+
+</html>

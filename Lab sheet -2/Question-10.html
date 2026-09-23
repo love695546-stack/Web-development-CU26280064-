@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Entry Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* Form Container */
+        .form-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        /* Table Header */
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Alternating Row Colors */
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        /* Hover Effect */
+        tbody tr:hover {
+            background-color: #dbeafe;
+        }
+
+        /* Input Fields */
+        td input,
+        td select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>Student Data Entry</h2>
+
+        <form>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <input type="text" name="name1"
+                                placeholder="Enter name">
+                        </td>
+
+                        <td>
+                            <input type="email" name="email1"
+                                placeholder="Enter email">
+                        </td>
+
+                        <td>
+                            <select name="course1">
+                                <option>Select Course</option>
+                                <option>BCA</option>
+                                <option>BBA</option>
+                                <option>MCA</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <input type="number" name="age1"
+                                placeholder="Age">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" name="name2"
+                                placeholder="Enter name">
+                        </td>
+
+                        <td>
+                            <input type="email" name="email2"
+                                placeholder="Enter email">
+                        </td>
+
+                        <td>
+                            <select name="course2">
+                                <option>Select Course</option>
+                                <option>BCA</option>
+                                <option>BBA</option>
+                                <option>MCA</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <input type="number" name="age2"
+                                placeholder="Age">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" name="name3"
+                                placeholder="Enter name">
+                        </td>
+
+                        <td>
+                            <input type="email" name="email3"
+                                placeholder="Enter email">
+                        </td>
+
+                        <td>
+                            <select name="course3">
+                                <option>Select Course</option>
+                                <option>BCA</option>
+                                <option>BBA</option>
+                                <option>MCA</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <input type="number" name="age3"
+                                placeholder="Age">
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <button type="submit" class="submit-btn">
+                Submit Data
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

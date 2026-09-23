@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>File Upload Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Form Container */
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Form Group */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* File Input */
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+
+            /* Smooth Transition */
+            transition: 0.3s;
+        }
+
+        /* Hover State */
+        .submit-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.03);
+        }
+
+        /* Active State */
+        .submit-btn:active {
+            background-color: #003f7f;
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>Upload File</h2>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"
+                    placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="file">Choose File</label>
+                <input type="file" id="file" name="file">
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Upload & Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Checkbox and Radio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        /* Hide Original Controls */
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Label */
+        label {
+            position: relative;
+            padding-left: 30px;
+            margin: 12px;
+            cursor: pointer;
+            display: block;
+        }
+
+        /* Checkbox Box */
+        .checkbox label::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+        }
+
+        /* Checkbox Tick */
+        .checkbox input:checked ~ label::after {
+            content: "✓";
+            position: absolute;
+            left: 4px;
+            top: 0;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Radio Circle */
+        .radio label::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #28a745;
+            border-radius: 50%;
+        }
+
+        /* Radio Dot */
+        .radio input:checked ~ label::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: #28a745;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Custom Form Controls</h2>
+
+    <h3>Choose Your Skills</h3>
+
+    <div class="checkbox">
+
+        <input type="checkbox" id="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="javascript">
+        <label for="javascript">JavaScript</label>
+
+    </div>
+
+
+    <h3>Choose Gender</h3>
+
+    <div class="radio">
+
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+
+    </div>
+
+</body>
+
+</html>

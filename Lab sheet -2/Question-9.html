@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Survey Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Main Form */
+        .survey-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Fieldset */
+        fieldset {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+        }
+
+        /* Legend */
+        legend {
+            padding: 5px 15px;
+            margin-left: 10px;
+            font-weight: bold;
+            color: #007bff;
+            background-color: white;
+        }
+
+        /* Form Group */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Radio and Checkbox */
+        .option {
+            margin: 8px 0;
+        }
+
+        .option label {
+            display: inline;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+
+        /* Submit Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="survey-form">
+
+        <h2>Customer Survey Form</h2>
+
+        <form>
+
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="Enter your email">
+                </div>
+            </fieldset>
+
+
+            <!-- Experience -->
+            <fieldset>
+                <legend>Your Experience</legend>
+
+                <div class="form-group">
+                    <label>How would you rate our service?</label>
+
+                    <div class="option">
+                        <input type="radio" id="excellent"
+                            name="rating" value="Excellent">
+                        <label for="excellent">Excellent</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" id="good"
+                            name="rating" value="Good">
+                        <label for="good">Good</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" id="average"
+                            name="rating" value="Average">
+                        <label for="average">Average</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" id="poor"
+                            name="rating" value="Poor">
+                        <label for="poor">Poor</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What did you like?</label>
+
+                    <div class="option">
+                        <input type="checkbox" id="quality"
+                            name="like" value="Quality">
+                        <label for="quality">Product Quality</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="checkbox" id="service"
+                            name="like" value="Service">
+                        <label for="service">Customer Service</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="checkbox" id="price"
+                            name="like" value="Price">
+                        <label for="price">Affordable Price</label>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <!-- Feedback -->
+            <fieldset>
+                <legend>Additional Feedback</legend>
+
+                <div class="form-group">
+                    <label for="feedback">Your Suggestions</label>
+
+                    <textarea id="feedback" name="feedback"
+                        rows="5"
+                        placeholder="Write your feedback here..."></textarea>
+                </div>
+            </fieldset>
+
+
+            <button type="submit">Submit Survey</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

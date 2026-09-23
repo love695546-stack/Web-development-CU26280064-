@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expanding Search Box</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        /* Search Box */
+        .search-box {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+
+            /* Smooth Animation */
+            transition: width 0.5s;
+        }
+
+        /* Expand on Focus */
+        .search-box:focus {
+            width: 400px;
+            border-color: #007bff;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Search</h2>
+
+    <input
+        type="text"
+        class="search-box"
+        placeholder="Search here..."
+    >
+
+</body>
+
+</html>

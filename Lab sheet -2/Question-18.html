@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+
+            /* Flexbox */
+            display: flex;
+            gap: 30px;
+        }
+
+        .contact-form,
+        .company-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .contact-form {
+            border-right: 1px solid #ddd;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .company-info p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 700px) {
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-form {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-container">
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+
+            <h2>Contact Us</h2>
+
+            <form>
+                <label>Name:</label>
+                <input type="text" name="name" placeholder="Enter your name">
+
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Enter your email">
+
+                <label>Message:</label>
+                <textarea name="message" placeholder="Write your message"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+
+        <!-- Company Location -->
+        <div class="company-info">
+
+            <h2>Our Location</h2>
+
+            <p>
+                <strong>Company:</strong> ABC Technologies
+            </p>
+
+            <p>
+                <strong>Address:</strong><br>
+                123 Main Street,<br>
+                Dehradun, Uttarakhand,<br>
+                India - 248001
+            </p>
+
+            <p>
+                <strong>Phone:</strong> +91 98765 43210
+            </p>
+
+            <p>
+                <strong>Email:</strong> info@abctech.com
+            </p>
+
+            <p>
+                <strong>Office Hours:</strong><br>
+                Monday - Saturday<br>
+                9:00 AM - 6:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Onboarding Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #prevBtn {
+            background-color: #777;
+        }
+
+        .step-number {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>User Onboarding</h2>
+
+        <div class="step-number">
+            Step <span id="stepNumber">1</span> of 3
+        </div>
+
+        <form>
+
+            <!-- Step 1 -->
+            <div class="step active">
+
+                <h3>Personal Information</h3>
+
+                <label>Full Name:</label>
+                <input type="text" placeholder="Enter your name">
+
+                <label>Email:</label>
+                <input type="email" placeholder="Enter your email">
+
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+
+                <h3>Account Details</h3>
+
+                <label>Username:</label>
+                <input type="text" placeholder="Enter username">
+
+                <label>Password:</label>
+                <input type="password" placeholder="Enter password">
+
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+
+                <h3>Preferences</h3>
+
+                <label>Department:</label>
+                <select>
+                    <option>Select Department</option>
+                    <option>IT</option>
+                    <option>HR</option>
+                    <option>Finance</option>
+                    <option>Marketing</option>
+                </select>
+
+                <label>City:</label>
+                <input type="text" placeholder="Enter your city">
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+
+                <button type="button" id="prevBtn"
+                        onclick="changeStep(-1)">
+                    Previous
+                </button>
+
+                <button type="button" id="nextBtn"
+                        onclick="changeStep(1)">
+                    Next
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script>
+        let currentStep = 0;
+
+        const steps = document.querySelectorAll(".step");
+        const stepNumber = document.getElementById("stepNumber");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        function showStep() {
+
+            // Hide all steps
+            steps.forEach(step => {
+                step.classList.remove("active");
+            });
+
+            // Show current step
+            steps[currentStep].classList.add("active");
+
+            // Update step number
+            stepNumber.textContent = currentStep + 1;
+
+            // Hide Previous button on first step
+            if (currentStep === 0) {
+                prevBtn.style.display = "none";
+            } else {
+                prevBtn.style.display = "block";
+            }
+
+            // Change Next button on last step
+            if (currentStep === steps.length - 1) {
+                nextBtn.textContent = "Finish";
+            } else {
+                nextBtn.textContent = "Next";
+            }
+        }
+
+        function changeStep(direction) {
+
+            if (direction === 1 && currentStep < steps.length - 1) {
+                currentStep++;
+            }
+            else if (direction === -1 && currentStep > 0) {
+                currentStep--;
+            }
+            else if (direction === 1 && currentStep === steps.length - 1) {
+                alert("Onboarding Completed!");
+                return;
+            }
+
+            showStep();
+        }
+
+        // Initial display
+        showStep();
+    </script>
+
+</body>
+</html>

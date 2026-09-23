@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Checkout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .payment-form {
+            width: 500px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row div {
+            width: 50%;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Mobile Screen */
+        @media (max-width: 600px) {
+
+            .payment-form {
+                width: 90%;
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .row {
+                display: block;
+            }
+
+            .row div {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            input,
+            select {
+                width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="payment-form">
+
+        <h2>Payment Checkout</h2>
+
+        <form>
+
+            <label>Card Holder Name</label>
+            <input type="text" placeholder="Enter name">
+
+            <label>Card Number</label>
+            <input type="text" placeholder="1234 5678 9012 3456">
+
+            <div class="row">
+
+                <div>
+                    <label>Expiry Date</label>
+                    <input type="text" placeholder="MM/YY">
+                </div>
+
+                <div>
+                    <label>CVV</label>
+                    <input type="password" placeholder="CVV">
+                </div>
+
+            </div>
+
+            <label>Payment Method</label>
+            <select>
+                <option>Select Payment Method</option>
+                <option>Credit Card</option>
+                <option>Debit Card</option>
+                <option>UPI</option>
+            </select>
+
+            <button type="submit">
+                Pay Now
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

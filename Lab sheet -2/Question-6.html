@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Two Column Form</title>
+
+    <style>
+        /* Form Container */
+        .form-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        /* Two-Column Grid */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Form Group */
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Labels */
+        .form-group label {
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        /* Input Fields */
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Full Width Element */
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            grid-column: 1 / -1;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width,
+            .submit-btn {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <form class="form-grid">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" placeholder="Enter your phone">
+            </div>
+
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" placeholder="Enter your city">
+            </div>
+
+            <div class="form-group full-width">
+                <label>Address</label>
+                <textarea rows="4" placeholder="Enter your address"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
