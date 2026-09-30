@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouseover and Mouseout Example</title>
+
+    <style>
+        #myBox {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myBox">Mouse ko yahan le jao</div>
+
+    <script>
+        // HTML element ko select karna
+        const box = document.getElementById("myBox");
+
+        // Mouseover event
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "yellow";
+        });
+
+        // Mouseout event
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "lightblue";
+        });
+    </script>
+
+</body>
+</html>

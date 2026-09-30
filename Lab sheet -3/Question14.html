@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Exception Handling</title>
+</head>
+
+<body>
+
+    <h1>JSON Parsing Example</h1>
+
+    <button onclick="parseJSON()">Parse JSON</button>
+
+    <p id="result"></p>
+
+    <script>
+        function parseJSON() {
+
+            // JSON string
+            const jsonString = '{"name":"Rahul","age":20}';
+
+            try {
+                // JSON parse karna
+                const data = JSON.parse(jsonString);
+
+                document.getElementById("result").innerHTML =
+                    "Name: " + data.name + "<br>" +
+                    "Age: " + data.age;
+            }
+
+            catch (error) {
+                // Error handle karna
+                document.getElementById("result").innerHTML =
+                    "Error: Invalid JSON!";
+            }
+
+            finally {
+                // Hamesha execute hoga
+                console.log("JSON parsing process completed.");
+            }
+        }
+    </script>
+
+</body>
+</html>

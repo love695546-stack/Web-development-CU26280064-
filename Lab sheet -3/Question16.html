@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Image Gallery Slider</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #gallery {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 20px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Gallery Slider</h1>
+
+    <!-- Image -->
+    <img id="gallery"
+         src="https://picsum.photos/id/1015/500/300"
+         alt="Gallery Image">
+
+    <br>
+
+    <!-- Buttons -->
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+
+        // Array containing image sources
+        const images = [
+            "https://picsum.photos/id/1015/500/300",
+            "https://picsum.photos/id/1016/500/300",
+            "https://picsum.photos/id/1018/500/300",
+            "https://picsum.photos/id/1020/500/300",
+            "https://picsum.photos/id/1024/500/300"
+        ];
+
+        // Current image index
+        let currentIndex = 0;
+
+        // Get image element
+        const gallery = document.getElementById("gallery");
+
+        // Next button function
+        function nextImage() {
+            currentIndex++;
+
+            // Go back to first image
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+
+            gallery.src = images[currentIndex];
+        }
+
+        // Previous button function
+        function previousImage() {
+            currentIndex--;
+
+            // Go to last image
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+
+            gallery.src = images[currentIndex];
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features Example</title>
+</head>
+
+<body>
+
+    <h1>ES6 Features</h1>
+
+    <p id="result"></p>
+
+    <script>
+        // Object
+        const student = {
+            name: "Rahul",
+            age: 20,
+            course: "BCA"
+        };
+
+        // Destructuring Assignment
+        const { name, age, course } = student;
+
+        // Arrow Function
+        const getMessage = () => {
+            // Template Literal
+            return `Student Name: ${name}<br>
+                    Age: ${age}<br>
+                    Course: ${course}`;
+        };
+
+        // Display result
+        document.getElementById("result").innerHTML = getMessage();
+    </script>
+
+</body>
+</html>

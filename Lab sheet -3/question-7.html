@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Custom Student Object and This Keyword</title>
+  </head>
+  <body>
+    <script>
+      let student = {
+          name: "Amit",
+          age: 20,
+          show: function() {
+              alert("Name: " + this.name + ", Age: " + this.age);
+          }
+      };
+      student.show();
+    </script>
+  </body>
+</html>

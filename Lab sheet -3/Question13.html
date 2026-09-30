@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Closure Counter</title>
+</head>
+
+<body>
+
+    <h1>Private Counter using Closure</h1>
+
+    <h2 id="counter">0</h2>
+
+    <button onclick="counter.increment()">Increment</button>
+    <button onclick="counter.decrement()">Decrement</button>
+
+    <script>
+        function createCounter() {
+            let count = 0; // Private variable
+
+            return {
+                increment: function() {
+                    count++;
+                    return count;
+                },
+
+                decrement: function() {
+                    count--;
+                    return count;
+                },
+
+                getCount: function() {
+                    return count;
+                }
+            };
+        }
+
+        // Create counter
+        const counter = createCounter();
+
+        // Update display
+        function updateDisplay() {
+            document.getElementById("counter").textContent =
+                counter.getCount();
+        }
+
+        // Button events
+        document.querySelectorAll("button")[0].onclick = function() {
+            counter.increment();
+            updateDisplay();
+        };
+
+        document.querySelectorAll("button")[1].onclick = function() {
+            counter.decrement();
+            updateDisplay();
+        };
+    </script>
+
+</body>
+</html>

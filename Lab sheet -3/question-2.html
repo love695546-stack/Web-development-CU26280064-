@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Prime or Composite Checker</title>
+  </head>
+  <body>
+    <script>
+      let n = Number(prompt("Enter a number:"));
+      let isPrime = true;
+      if (n <= 1) {
+          isPrime = false;
+      } else {
+          for (let i = 2; i < n; i++) {
+              if (n % i === 0) { isPrime = false; break; }
+          }
+      }
+      alert(n + (isPrime ? " is Prime" : " is Composite"));
+    </script>
+  </body>
+</html>

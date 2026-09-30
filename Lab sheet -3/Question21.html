@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Function Example</title>
+</head>
+
+<body>
+
+    <h1>Callback and Asynchronous JavaScript</h1>
+
+    <button onclick="startProcess()">Start Process</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        // Function that accepts a callback
+        function doTask(callback) {
+
+            document.getElementById("result").innerHTML =
+                "Task started...";
+
+            // Asynchronous operation
+            setTimeout(function() {
+
+                document.getElementById("result").innerHTML =
+                    "Task completed!";
+
+                // Calling the callback function
+                callback();
+
+            }, 3000);
+        }
+
+        // Callback function
+        function finished() {
+
+            document.getElementById("result").innerHTML +=
+                "<br>Callback function executed!";
+        }
+
+        // Start the process
+        function startProcess() {
+
+            document.getElementById("result").innerHTML =
+                "Processing...";
+
+            doTask(finished);
+
+            document.getElementById("result").innerHTML +=
+                "<br>This message appears immediately!";
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        li {
+            background-color: #f2f2f2;
+            margin: 8px;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .delete {
+            float: right;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Todo List</h1>
+
+    <input type="text" id="taskInput" placeholder="Enter a task">
+
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+
+        // Function to add task
+        function addTask() {
+
+            // Get input value
+            const task = document.getElementById("taskInput").value;
+
+            // Check if input is empty
+            if (task === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            // Create a new list item
+            const li = document.createElement("li");
+
+            // Add task text
+            li.textContent = task;
+
+            // Create delete button
+            const deleteButton = document.createElement("button");
+
+            deleteButton.textContent = "Delete";
+            deleteButton.className = "delete";
+
+            // Delete task when button is clicked
+            deleteButton.onclick = function() {
+                li.remove();
+            };
+
+            // Add delete button to list item
+            li.appendChild(deleteButton);
+
+            // Add list item to unordered list
+            document.getElementById("taskList").appendChild(li);
+
+            // Clear input field
+            document.getElementById("taskInput").value = "";
+        }
+
+    </script>
+
+</body>
+</html>

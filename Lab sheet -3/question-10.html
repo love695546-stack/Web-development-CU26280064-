@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Real-time Form Validation</title>
+  </head>
+  <body>
+
+    <form onsubmit="return validateForm()">
+      <h2>Register Form</h2>
+      <input type="password" id="p1" placeholder="Enter Password" required><br><br>
+      <input type="password" id="p2" placeholder="Confirm Password" required><br>
+      <p id="msg" style="color: red;"></p>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      let p2 = document.getElementById("p2");
+
+      // Real-time check while typing
+      p2.addEventListener("keyup", function() {
+          let p1Val = document.getElementById("p1").value;
+          let msg = document.getElementById("msg");
+          
+          if (p2.value === p1Val) {
+              msg.style.color = "green";
+              msg.innerText = "Passwords match";
+          } else {
+              msg.style.color = "red";
+              msg.innerText = "Passwords do not match";
+          }
+      });
+
+      // Check before submission
+      function validateForm() {
+          let p1Val = document.getElementById("p1").value;
+          let p2Val = document.getElementById("p2").value;
+          
+          if (p1Val !== p2Val) {
+              alert("Passwords do not match! Submission stopped.");
+              return false; // Form submit nahi hoga
+          }
+          
+          alert("Form submitted successfully!");
+          return true;
+      }
+    </script>
+
+  </body>
+</html>
