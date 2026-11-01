@@ -1,0 +1,414 @@
+
+/* Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --card-color: #f4f4f4;
+    --primary-color: #6c63ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+/* Dark Mode */
+body.dark {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --card-color: #333333;
+}
+
+/* Navbar */
+header {
+    background: var(--primary-color);
+    padding: 15px 5%;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: yellow;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 400px;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://picsum.photos/1200/600") center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Common Section */
+.section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+/* Statistics */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 35px;
+}
+
+.stats h2 {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+/* Search Input */
+#searchInput {
+    padding: 12px;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 25px;
+}
+
+/* Project Cards */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--card-color);
+    padding: 30px;
+    width: 280px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Photo Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-card {
+    background: var(--card-color);
+    padding: 30px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* Pricing */
+.pricing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.price-card {
+    background: var(--card-color);
+    padding: 35px;
+    width: 230px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.price-card h2 {
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.popular {
+    border: 3px solid var(--primary-color);
+}
+
+/* Testimonials */
+.testimonial {
+    background: var(--card-color);
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 8px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* FAQ */
+.faq {
+    max-width: 600px;
+    margin: auto;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+}
+
+.faq-answer {
+    display: none;
+    background: var(--card-color);
+    padding: 15px;
+}
+
+/* Contact Form */
+#contactForm {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contactForm textarea {
+    height: 120px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* Footer */
+footer {
+    background: #222222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: yellow;
+}
+
+/* Back to Top */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+}
+
+/* Tablet Screen */
+@media (max-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+}
+
+/* Mobile Screen */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+    }
+}
+
+/* Print CSS */
+@media print {
+    header,
+    footer,
+    button,
+    #topBtn {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+}

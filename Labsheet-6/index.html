@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header and Navbar -->
+    <header>
+        <nav class="navbar">
+            <h2>My Portfolio</h2>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="themeBtn">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hello, I am a Web Developer</h1>
+                <p>I create simple and responsive websites.</p>
+                <a href="#projects" class="btn">View Projects</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                My name is Lovkush. I am interested in web development.
+                I know HTML, CSS, JavaScript and PHP.
+            </p>
+
+            <!-- Statistics Counter -->
+            <div class="stats">
+                <div>
+                    <h2 class="counter" data-target="10">0</h2>
+                    <p>Projects</p>
+                </div>
+
+                <div>
+                    <h2 class="counter" data-target="5">0</h2>
+                    <p>Skills</p>
+                </div>
+
+                <div>
+                    <h2 class="counter" data-target="2">0</h2>
+                    <p>Experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+
+            <input type="text" id="searchInput"
+                   placeholder="Search projects...">
+
+            <div class="project-grid" id="projectGrid">
+
+                <div class="project-card">
+                    <h3>Student Management System</h3>
+                    <p>HTML, CSS and PHP project.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Invoice Management System</h3>
+                    <p>PHP and MySQL project.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>HTML, CSS and JavaScript project.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="section">
+            <h2>Photo Gallery</h2>
+
+            <div class="gallery">
+                <img src="https://picsum.photos/300/200?random=1" alt="Gallery image 1">
+                <img src="https://picsum.photos/300/200?random=2" alt="Gallery image 2">
+                <img src="https://picsum.photos/300/200?random=3" alt="Gallery image 3">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <h2>My Skills</h2>
+
+            <div class="features">
+                <div class="feature-card">💻 HTML</div>
+                <div class="feature-card">🎨 CSS</div>
+                <div class="feature-card">⚡ JavaScript</div>
+                <div class="feature-card">🗄️ MySQL</div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="section">
+            <h2>My Services</h2>
+
+            <div class="pricing">
+
+                <div class="price-card">
+                    <h3>Basic</h3>
+                    <h2>₹999</h2>
+                    <p>Simple Website</p>
+                </div>
+
+                <div class="price-card popular">
+                    <h3>Popular</h3>
+                    <h2>₹1999</h2>
+                    <p>Responsive Website</p>
+                </div>
+
+                <div class="price-card">
+                    <h3>Premium</h3>
+                    <h2>₹2999</h2>
+                    <p>Complete Website</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <h2>Testimonials</h2>
+
+            <div class="testimonial">
+                <p id="testimonialText">Great work and excellent design!</p>
+                <h3 id="testimonialName">- Rahul</h3>
+
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section class="section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <button class="faq-question">What is HTML?</button>
+                <p class="faq-answer">HTML is used to create web pages.</p>
+
+                <button class="faq-question">What is CSS?</button>
+                <p class="faq-answer">CSS is used to style web pages.</p>
+
+                <button class="faq-question">What is JavaScript?</button>
+                <p class="faq-answer">JavaScript makes websites interactive.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Your Email">
+                <textarea id="message" placeholder="Your Message"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <p id="formMessage"></p>
+        </section>
+
+        <!-- Modal Popup -->
+        <section class="section">
+            <h2>More Information</h2>
+            <button id="openModal">Open Popup</button>
+        </section>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <button id="closeModal" class="close-btn">X</button>
+                <h2>Welcome!</h2>
+                <p>Thank you for visiting my portfolio.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 My Portfolio. All Rights Reserved.</p>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn">↑</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
