@@ -1,0 +1,45 @@
+/* Question 4: Incorporate modern web design principles including consistent color palettes, typography scales, and white space management. */
+
+:root {
+    /* Color Palette */
+    --primary-color: #2d6a4f;      /* Deep Forest Green */
+    --primary-hover: #1b4332;      /* Dark Emerald Green */
+    --secondary-color: #d8f3dc;    /* Soft Mint Green */
+    --accent-color: #e9c46a;       /* Warm Earth Gold */
+    --text-dark: #1f2937;          /* High contrast charcoal */
+    --text-light: #f9fafb;         /* Off-white */
+    --bg-main: #ffffff;
+    --bg-alt: #f4f7f4;
+
+    /* Typography Scale (Modular Scale 1.25) */
+    --font-xs: 0.8rem;
+    --font-sm: 1rem;
+    --font-md: 1.25rem;
+    --font-lg: 1.563rem;
+    --font-xl: 1.953rem;
+    --font-xxl: 2.441rem;
+
+    /* White Space / Spacing System */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    font-size: var(--font-sm);
+}
+
+h1 { font-size: var(--font-xxl); margin-bottom: var(--space-md); }
+h2 { font-size: var(--font-xl); margin-bottom: var(--space-sm); color: var(--primary-color); }
+h3 { font-size: var(--font-lg); margin-bottom: var(--space-xs); }
+
+.section-padding {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    padding-left: 10%;
+    padding-right: 10%;
+}

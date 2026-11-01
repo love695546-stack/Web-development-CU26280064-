@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Question 5: Implement web accessibility standards (WCAG) including ARIA landmarks, alt text for all images, and sufficient color contrast ratios. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WCAG Accessible Section</title>
+    <style>
+        /* High contrast colors passing WCAG AAA (4.5:1 ratio) */
+        .accessible-btn {
+            background-color: #1b4332; /* Contrast ratio > 7:1 against white text */
+            color: #ffffff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .accessible-btn:focus-visible {
+            outline: 3px solid #e9c46a;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <header role="banner">
+        <nav role="navigation" aria-label="Primary Navigation">
+            <a href="#main-content" class="skip-link">Skip to main content</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section aria-labelledby="accessible-heading">
+            <h1 id="accessible-heading">Accessible Organic Bakery Showcase</h1>
+            
+            <!-- Mandatory Alt text for screen readers -->
+            <img src="artisan_bread.jpg" alt="Freshly baked artisan sourdough loaf on a wooden cutting board" width="400">
+
+            <p>Our bakery follows strict WCAG 2.1 accessibility standards.</p>
+
+            <button class="accessible-btn" aria-label="Reserve a table at Green Leaf Cafe">Book Table Now</button>
+        </section>
+    </main>
+
+</body>
+</html>

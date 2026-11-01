@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Question 2: Implement a semantic HTML5 structure reflecting the client's business offerings, team, testimonials, and contact details. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Q03_Responsive_Layout.css">
+    <link rel="stylesheet" href="Q04_Web_Design_Principles.css">
+    <title>Green Leaf Café | Artisan & Organic Bakery</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header role="banner">
+        <div class="logo">Green Leaf Café</div>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#offerings">Offerings</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#reservation">Reserve Table</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Business Offerings -->
+        <section id="offerings" aria-labelledby="offerings-heading">
+            <h2 id="offerings-heading">Our Eco-Friendly Offerings</h2>
+            <article class="offering-card">
+                <h3>Organic Coffee</h3>
+                <p>Fair-trade 100% organic espresso and hand-poured coffee blends.</p>
+            </article>
+            <article class="offering-card">
+                <h3>Artisan Bakery</h3>
+                <p>Fresh sourdough bread and vegan pastries baked daily.</p>
+            </article>
+        </section>
+
+        <!-- Our Team -->
+        <section id="team" aria-labelledby="team-heading">
+            <h2 id="team-heading">Meet Our Master Bakers</h2>
+            <article class="team-card">
+                <h3>Chef Elena Rostova</h3>
+                <p>Head Pastry Chef with 12+ years of culinary experience.</p>
+            </article>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading">What Our Guests Say</h2>
+            <blockquote class="testimonial-item">
+                <p>"Best sourdough and organic espresso in town!"</p>
+                <cite>- Mark D.</cite>
+            </blockquote>
+        </section>
+
+        <!-- Contact Details -->
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact & Location</h2>
+            <p>Address: 104 Eco Green Street, Haridwar / Agra</p>
+            <p>Phone: +91 98765 43210</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; 2026 Green Leaf Café. All Rights Reserved.</p>
+        <script src="Q06_Hero_Carousel.js"></script>  
+        <script src="Q07_Reservation_Form_Validation.js"></script>
+        <script src="Q19_Clean_Code_Standards.js"></script>
+    </footer>
+
+</body>
+</html>

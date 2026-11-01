@@ -1,0 +1,11 @@
+Question 15: Live Demonstration Script for Lab Presentation
+
+================================================================================
+                      LAB DEMONSTRATION STEP-BY-STEP SCRIPT
+================================================================================
+Step 1: Open Home Page -> Demonstrate smooth hero banner image carousel transitions.
+Step 2: Resize browser window -> Show Mobile Hamburger Menu expansion and collapse.
+Step 3: Scroll to Reservation Form -> Test client-side JavaScript input validation by submitting blank inputs.
+Step 4: Show Success Alert -> Demonstrate valid reservation submission.
+Step 5: Inspect Elements -> Highlight semantic tags (<header>, <main>, <article>, <footer>) and ARIA attributes.
+================================================================================

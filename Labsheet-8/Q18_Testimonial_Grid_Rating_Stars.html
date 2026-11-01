@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Question 18: Incorporate customer testimonial grids with interactive rating stars. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Testimonials Grid</title>
+    <style>
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .star-rating {
+            color: #f59e0b;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="customer-reviews">
+        <h2>Customer Reviews</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="star-rating">★★★★★</div>
+                <p>"The vegan pastries and fair-trade latte are unmatched. Outstanding vibe!"</p>
+                <h4>- Sophia Martinez</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="star-rating">★★★★☆</div>
+                <p>"Loved the sourdough bread. Fast table reservation system."</p>
+                <h4>- Rahul Sharma</h4>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
