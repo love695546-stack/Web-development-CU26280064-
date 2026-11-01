@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Question 1: Design the homepage of the online bookstore featuring featured books, search bar, category navigation, and promotional banners using HTML and CSS. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore - Home</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f4f6f8; }
+        header { background-color: #1e293b; color: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        .search-bar { width: 40%; padding: 0.5rem; border-radius: 4px; border: none; }
+        nav { background: #334155; padding: 0.75rem 5%; }
+        nav a { color: #fff; margin-right: 1.5rem; text-decoration: none; font-weight: 500; }
+        .banner { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; padding: 3rem 5%; text-align: center; }
+        .featured-books { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; padding: 2rem 5%; }
+        .book-card { background: white; border-radius: 8px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>BookStore</h2>
+        <input type="text" class="search-bar" placeholder="Search books by title, author...">
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Fiction</a>
+        <a href="#">Non-Fiction</a>
+        <a href="#">Technology</a>
+        <a href="#">Offers</a>
+    </nav>
+    <div class="banner">
+        <h1>Special Discount Up to 50% Off!</h1>
+        <p>Discover best-selling books across various genres.</p>
+    </div>
+    <div class="featured-books">
+        <div class="book-card">
+            <img src="https://via.placeholder.com/150x200" alt="Book 1">
+            <h3>PHP & MySQL Mastery</h3>
+            <p>$29.99</p>
+        </div>
+        <div class="book-card">
+            <img src="https://via.placeholder.com/150x200" alt="Book 2">
+            <h3>Web Development 101</h3>
+            <p>$19.99</p>
+        </div>
+    </div>
+</body>
+</html>

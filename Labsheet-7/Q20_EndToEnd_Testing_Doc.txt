@@ -1,0 +1,11 @@
+Question 20: Test the complete end-to-end e-commerce user journey: browsing, searching, adding to cart, user login, checkout, and order confirmation.
+
+==================================================
+END-TO-END E-COMMERCE TESTING CHECKLIST
+==================================================
+1. Browsing Test: Verify books load dynamically on homepage grid layout.
+2. Search Test: Query title/author in search bar and verify filtered SQL response.
+3. Cart System Test: Add book to cart, adjust quantities, verify stock check boundary limits.
+4. User Auth Test: Register new user, test BCRYPT password verification on login session.
+5. Checkout & Invoice: Input shipping address, record order into MySQL, clear cart session, verify invoice generation.
+==================================================
