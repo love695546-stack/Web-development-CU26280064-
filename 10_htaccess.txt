@@ -1,0 +1,23 @@
+# ===================================================================
+# Q10: .htaccess + handler directives to run Python scripts in web folders
+# ===================================================================
+# Step 1. Save the block below as a file named exactly  .htaccess
+#         inside the web directory (for example /var/www/html/pyapp/).
+# Step 2. Allow it in the Apache config for that directory:
+#             <Directory /var/www/html/pyapp>
+#                 AllowOverride All        # lets .htaccess use these directives
+#             </Directory>
+#         and enable CGI:  sudo a2enmod cgi   (XAMPP: mod_cgi is usually on)
+# Step 3. Make scripts executable (Linux):  chmod +x *.py
+#         and give each script a shebang first line:  #!/usr/bin/env python3
+# Step 4. Restart Apache. Open http://localhost/pyapp/10_test_htaccess.py
+# -------------------------------------------------------------------
+
+Options +ExecCGI                 # allow CGI execution in this folder
+AddHandler cgi-script .py        # treat every .py file as a CGI program
+DirectoryIndex index.py index.html   # run index.py when the folder URL is opened
+
+# Optional: block direct web access to private helper files
+<FilesMatch "^(db_config|web_helpers)\.py$">
+    Require all denied
+</FilesMatch>

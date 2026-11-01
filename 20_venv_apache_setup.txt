@@ -1,0 +1,36 @@
+# ===================================================================
+# Q20: Python virtual environment (venv) integrated with Apache
+# ===================================================================
+
+# ---- 1. Create and activate the virtual environment ----------------
+#   Linux / macOS:
+#       python3 -m venv /var/www/pyapp/venv
+#       source /var/www/pyapp/venv/bin/activate
+#   Windows:
+#       python -m venv C:\pyapp\venv
+#       C:\pyapp\venv\Scripts\activate
+
+# ---- 2. Install the libraries INSIDE the venv ----------------------
+#       pip install mysql-connector-python SQLAlchemy
+#       pip freeze > requirements.txt
+#       deactivate
+
+# ---- 3a. CGI + venv: point the script's first line at the venv's python
+#   #!/var/www/pyapp/venv/bin/python           (Linux)
+#   #!C:/pyapp/venv/Scripts/python.exe         (Windows)
+
+# ---- 3b. mod_wsgi + venv: add to the Apache virtual host -----------
+#   WSGIDaemonProcess pyapp python-home=/var/www/pyapp/venv python-path=/var/www/pyapp
+#   WSGIProcessGroup pyapp
+#   WSGIScriptAlias /app /var/www/pyapp/20_app.wsgi
+#   <Directory /var/www/pyapp>
+#       Require all granted
+#   </Directory>
+#
+#   The venv must be created with the SAME Python version that mod_wsgi
+#   was built for (check with:  apache2ctl -M | grep wsgi ).
+
+# ---- 4. Restart and test -------------------------------------------
+#   sudo systemctl restart apache2
+#   Open http://localhost/app  - the page should show the venv path
+#   and whether mysql.connector can be imported.
