@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'Question-4.php';
 
 header('Content-Type: text/csv; charset=utf-8');
 header('Content-Disposition: attachment; filename=students_export.csv');

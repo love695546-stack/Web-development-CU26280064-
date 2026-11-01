@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'Question-4.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

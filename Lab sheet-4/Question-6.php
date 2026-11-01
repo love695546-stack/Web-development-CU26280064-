@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'Question-4.php';
 
 $stmt = $pdo->prepare("INSERT INTO students (name, email, enrollment_date) VALUES (?, ?, ?)");
 $name = "John Doe";

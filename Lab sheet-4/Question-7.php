@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'Question-4.php';
 $stmt = $pdo->query("SELECT id, name, email, enrollment_date FROM students");
 $students = $stmt->fetchAll();
 ?>
@@ -11,7 +11,7 @@ $students = $stmt->fetchAll();
     </style>
 </head>
 <body>
-    <h2 style="text-align: center;">Student List</h2>
+    <h2 style="text-align: left;">Student List</h2>
     <table>
         <tr><th>ID</th><th>Name</th><th>Email</th><th>Enrollment Date</th></tr>
         <?php foreach ($students as $row): ?>

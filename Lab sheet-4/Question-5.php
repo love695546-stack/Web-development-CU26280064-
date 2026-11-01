@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'Question-4.php';
 
 $sql = "CREATE TABLE IF NOT EXISTS students (
     id INT AUTO_INCREMENT PRIMARY KEY,

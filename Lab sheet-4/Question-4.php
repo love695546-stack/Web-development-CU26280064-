@@ -2,7 +2,7 @@
 $host = '127.0.0.1';
 $db   = 'college_db';
 $user = 'root';
-$pass = '';
+$pass = 'CU26280064';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -14,7 +14,7 @@ $options = [
 
 try {
      $pdo = new PDO($dsn, $user, $pass, $options);
-     echo "Connected successfully to the database!";
+     // echo "Connected successfully to the database!";
 } catch (\PDOException $e) {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
