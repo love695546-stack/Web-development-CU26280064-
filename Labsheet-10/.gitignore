@@ -1,0 +1,6 @@
+/config/database.php
+/vendor/
+/uploads/*
+!.gitignore
+.env
+.DS_Store
