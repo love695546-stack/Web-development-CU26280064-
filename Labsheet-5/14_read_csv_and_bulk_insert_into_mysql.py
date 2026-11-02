@@ -8,7 +8,7 @@ with open("users.csv", newline="", encoding="utf-8") as file:
         records.append((row["name"], row["email"], int(row["age"])))
 
 con = mysql.connector.connect(
-    host="localhost", user="root", password="YOUR_PASSWORD",
+    host="localhost", user="root", password="CU26280064",
     database="python_web_db"
 )
 cur = con.cursor()

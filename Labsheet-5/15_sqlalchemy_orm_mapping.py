@@ -3,7 +3,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
 
 # Replace credentials. URL format: mysql+pymysql://user:password@host/database
 engine = create_engine(
-    "mysql+pymysql://root:YOUR_PASSWORD@localhost/python_web_db",
+    "mysql+pymysql://root:CU26280064@localhost/python_web_db",
     echo=True
 )
 

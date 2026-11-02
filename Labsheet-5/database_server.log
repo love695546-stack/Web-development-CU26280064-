@@ -1,0 +1,4 @@
+2026-11-02 11:11:46,170 INFO package: mysql.connector.plugins
+2026-11-02 11:11:46,171 INFO plugin_name: caching_sha2_password
+2026-11-02 11:11:46,171 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2026-11-02 11:11:46,173 INFO Database query completed successfully

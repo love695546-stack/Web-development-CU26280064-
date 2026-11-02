@@ -5,7 +5,7 @@ pool = MySQLConnectionPool(
     pool_size=5,
     host="localhost",
     user="root",
-    password="YOUR_PASSWORD",
+    password="CU26280064",
     database="python_web_db"
 )
 

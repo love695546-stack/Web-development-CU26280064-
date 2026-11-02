@@ -4,7 +4,7 @@ try:
     con = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="YOUR_PASSWORD"
+        password="CU26280064"
     )
     cur = con.cursor()
     cur.execute("SELECT VERSION()")

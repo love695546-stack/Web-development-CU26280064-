@@ -4,7 +4,7 @@ from http.cookies import SimpleCookie
 
 def get_connection():
     return mysql.connector.connect(
-        host="localhost", user="root", password="YOUR_PASSWORD",
+        host="localhost", user="root", password="CU26280064",
         database="python_web_db"
     )
 

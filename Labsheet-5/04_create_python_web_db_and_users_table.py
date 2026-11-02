@@ -1,7 +1,7 @@
 import mysql.connector
 
 con = mysql.connector.connect(
-    host="localhost", user="root", password="YOUR_PASSWORD"
+    host="localhost", user="root", password="CU26280064"
 )
 cur = con.cursor()
 cur.execute("CREATE DATABASE IF NOT EXISTS python_web_db")

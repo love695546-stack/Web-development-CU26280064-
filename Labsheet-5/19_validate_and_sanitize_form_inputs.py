@@ -13,7 +13,7 @@ if not age_text.isdigit() or not 0 <= int(age_text) <= 120:
     raise ValueError("Age must be a number from 0 to 120.")
 
 con = mysql.connector.connect(
-    host="localhost", user="root", password="YOUR_PASSWORD",
+    host="localhost", user="root", password="CU26280064",
     database="python_web_db"
 )
 cur = con.cursor()
